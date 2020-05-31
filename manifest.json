@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "Seconds",
+	"version": "0.1",
+	"description": "Track how much time you spend browsing a website everyday",
+	"icons": {
+		"48": "icons/border-48.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.mozilla.org/*"],
+			"js": ["borderify.js"]
+		}
+	]
+}
