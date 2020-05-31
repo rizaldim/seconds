@@ -2,14 +2,19 @@
 	"manifest_version": 2,
 	"name": "Seconds",
 	"version": "0.1",
+	"homepage_url": "https://github.com/rizaldim/seconds",
 	"description": "Track how much time you spend browsing a website everyday",
+	"permissions": ["tabs"],
 	"icons": {
 		"48": "icons/border-48.png"
 	},
-	"content_scripts": [
-		{
-			"matches": ["*://*.mozilla.org/*"],
-			"js": ["borderify.js"]
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"default_title": "Seconds",
+		"default_icon": {
+			"48": "icons/border-48.png"
 		}
-	]
+	}
 }
